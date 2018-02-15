@@ -25,15 +25,15 @@ $(document).ready(function() {
     
     function addNews(data){
         
-        const humidi = data.daily.data;
-           
-            $('.item0').text(data.currently.summary);
-            $('.item1').text(data.daily.data[0].summary);
-            $('.item2').text(data.daily.data[1].summary);
-            $('.item3').text(data.daily.data[2].summary);
-            $('.item4').text(data.daily.data[3].summary);
-            $('.item5').text(data.daily.data[4].summary);
-            $('.item6').text(data.daily.data[5].summary);
+        const humidi = data.daily.data;          
+  
+            $('.item0').text('Lunes: '+ data.currently.summary);
+            $('.item1').text('Martes: '+data.daily.data[0].summary);
+            $('.item2').text('Miercoles: '+ data.daily.data[1].summary);
+            $('.item3').text('Jueves: ' + data.daily.data[2].summary);
+            $('.item4').text('Viernes: '+data.daily.data[3].summary);
+            $('.item5').text('Sabado: '+ data.daily.data[4].summary);
+            $('.item6').text('Domingo: '+ data.daily.data[5].summary);
            
     };    
 }); 
