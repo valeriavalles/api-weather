@@ -31,9 +31,9 @@ $(document).ready(function() {
             $('.item1').text('Mañana:'+data.daily.data[0].summary);
             $('.item2').text('Sábado: '+ data.daily.data[1].summary);
             $('.item3').text('Domingo: ' + data.daily.data[2].summary);
-            $('.item4').text('Lunes: '+data.daily.data[3].summary);
-            $('.item5').text('Martes: '+ data.daily.data[4].summary);
-            $('.item6').text('Miercoles': '+ data.daily.data[5].summary);
+            $('.item4').text('Lunes: ' + data.daily.data[3].summary);
+            $('.item5').text('Martes: ' + data.daily.data[4].summary);
+            $('.item6').text('Miercoles' + data.daily.data[5].summary);
            
          };    
     }); 
