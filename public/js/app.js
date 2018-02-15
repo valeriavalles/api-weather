@@ -1,19 +1,18 @@
 
-$(document).ready(function() { 
-    
-    var responseContent = $('#response-content');
-    var proxy = 'https://cors-anywhere.herokuapp.com/';
-    var apiLinkDS = "https://api.darksky.net/forecast/581f42d72e7b097820d2c7e0a56373d2/-12.1155843,%20-77.0224692?lang=es";
-    var button = $('#btn');
+$(document).ready(function() {
+  var responseContent = $('#response-content');
+  var proxy = 'https://cors-anywhere.herokuapp.com/';
+  var apiLinkDS = 'https://api.darksky.net/forecast/581f42d72e7b097820d2c7e0a56373d2/-12.1155843,%20-77.0224692?lang=es';
+  var button = $('#btn');
 
-    button.on('click',function(data){
+  button.on('click', function(data) {
     $.ajax({
       url: proxy + apiLinkDS,
-      success:function(data) { 
+      success: function(data) { 
         var temperature = data.currently.temperature;
         var description = data.currently.summary;
         var humidity = data.currently.humidity;
-        //responseContent.innerHTML = temperature;
+        // responseContent.innerHTML = temperature;
         $('#info').text(temperature);
         $('#weather-description').text(description);
         $('.hola').text(data.timezone);
@@ -23,18 +22,16 @@ $(document).ready(function() {
     }).done(addNews);
     
     
-        function addNews(data){
-        
-           const humidi = data.daily.data;          
+    function addNews(data) {
+      const humidi = data.daily.data;          
   
-            $('.item0').text('Hoy: '+ data.currently.summary);
-            $('.item1').text('Mañana:'+data.daily.data[0].summary);
-            $('.item2').text('Sábado: '+ data.daily.data[1].summary);
-            $('.item3').text('Domingo: ' + data.daily.data[2].summary);
-            $('.item4').text('Lunes: ' + data.daily.data[3].summary);
-            $('.item5').text('Martes: ' + data.daily.data[4].summary);
-            $('.item6').text('Miercoles' + data.daily.data[5].summary);
-           
-         };    
-    }); 
+      $('.item0').text('Hoy: ' + data.currently.summary);
+      $('.item1').text('Mañana:' + data.daily.data[0].summary);
+      $('.item2').text('Sábado: ' + data.daily.data[1].summary);
+      $('.item3').text('Domingo: ' + data.daily.data[2].summary);
+      $('.item4').text('Lunes: ' + data.daily.data[3].summary);
+      $('.item5').text('Martes: ' + data.daily.data[4].summary);
+      $('.item6').text('Miercoles:' + data.daily.data[5].summary);
+    };    
+  }); 
 }); 

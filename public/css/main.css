@@ -2,9 +2,11 @@ body{
 	padding: 0;
 	margin:0;
 	box-sizing: border-box;
+	background: rgb(183, 238, 138);
 }
 h1 {
-    text-align: center;
+	text-align: center;
+	font-family: 'Francois One', sans-serif;
 }
 li{
 	list-style: none;
@@ -12,4 +14,17 @@ li{
 
 .text-center{
 	text-align: center;
+}
+.content-btn {
+	margin-top: 10%;
+	display: inline-block;
+	text-align: center;
+}
+
+.conten-info {
+	margin-top: 10rem;
+}
+.cont-item {
+	font-family: 'Francois One', sans-serif;
+	
 }
