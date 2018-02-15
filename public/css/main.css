@@ -1,0 +1,15 @@
+body{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+}
+li{
+	list-style: none;
+}
+
+.text-center{
+	text-align: center;
+}
