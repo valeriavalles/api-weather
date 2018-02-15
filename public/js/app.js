@@ -23,9 +23,9 @@ $(document).ready(function() {
     }).done(addNews);
     
     
-    function addNews(data){
+        function addNews(data){
         
-        const humidi = data.daily.data;          
+           const humidi = data.daily.data;          
   
             $('.item0').text('Hoy: '+ data.currently.summary);
             $('.item1').text('Mañana:'+data.daily.data[0].summary);
@@ -35,6 +35,6 @@ $(document).ready(function() {
             $('.item5').text('Martes: '+ data.daily.data[4].summary);
             $('.item6').text('Miercoles': '+ data.daily.data[5].summary);
            
-    };    
-}); 
+         };    
+    }); 
 }); 
