@@ -12,11 +12,12 @@ $(document).ready(function() {
         var temperature = data.currently.temperature;
         var description = data.currently.summary;
         var humidity = data.currently.humidity;
+        console.log(data);
         // responseContent.innerHTML = temperature;
         $('#info').text(temperature);
         $('#weather-description').text(description);
         $('.hola').text(data.timezone);
-        console.log(data.currently);
+       
       }
 
     }).done(addNews);
@@ -24,14 +25,14 @@ $(document).ready(function() {
     
     function addNews(data) {
       const humidi = data.daily.data;          
-  
-      $('.item0').text('Hoy: ' + data.currently.summary);
-      $('.item1').text('Mañana:' + data.daily.data[0].summary);
-      $('.item2').text('Sábado: ' + data.daily.data[1].summary);
-      $('.item3').text('Domingo: ' + data.daily.data[2].summary);
-      $('.item4').text('Lunes: ' + data.daily.data[3].summary);
-      $('.item5').text('Martes: ' + data.daily.data[4].summary);
-      $('.item6').text('Miercoles:' + data.daily.data[5].summary);
+      //console.log(humidi);
+      $('.item0').text('Monday: ' + data.currently.summary);
+      $('.item1').text('Tuesday:' + data.daily.data[0].summary + '*' + data.daily.data[0].humidity);
+      $('.item2').text('Wednesday: ' + data.daily.data[1].summary + '*' + data.daily.data[1].humidity);
+      $('.item3').text('Thursday: ' + data.daily.data[2].summary + '*' + data.daily.data[2].humidity);
+      $('.item4').text('Friday: ' + data.daily.data[3].summary + '*' + data.daily.data[3].humidity);
+      $('.item5').text('Saturday:' + data.daily.data[4].summary + '*' + data.daily.data[4].humidity);
+      $('.item6').text('Sunday:' + data.daily.data[5].summary + '*' + data.daily.data[5].humidity);
     };    
   }); 
 }); 
