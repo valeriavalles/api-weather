@@ -4,7 +4,6 @@ $(document).ready(function() {
   var proxy = 'https://cors-anywhere.herokuapp.com/';
   var apiLinkDS = 'https://api.darksky.net/forecast/581f42d72e7b097820d2c7e0a56373d2/-12.1155843,%20-77.0224692?lang=es';
   var button = $('#btn');
-
   button.on('click', function(data) {
     $.ajax({
       url: proxy + apiLinkDS,
@@ -17,15 +16,12 @@ $(document).ready(function() {
         $('#info').text(temperature);
         $('#weather-description').text(description);
         $('.hola').text(data.timezone);
-       
       }
-
     }).done(addNews);
-    
-    
+    // cogiendo la data summary/humidity
     function addNews(data) {
       const humidi = data.daily.data;          
-      //console.log(humidi);
+      // console.log(humidi);
       $('.item0').text('Monday: ' + data.currently.summary);
       $('.item1').text('Tuesday:' + data.daily.data[0].summary + '*' + data.daily.data[0].humidity);
       $('.item2').text('Wednesday: ' + data.daily.data[1].summary + '*' + data.daily.data[1].humidity);
