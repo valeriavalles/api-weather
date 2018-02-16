@@ -1,6 +1,22 @@
-# WEATHER
+## APP WEATHER
 
-> Recuerda seguir siempre esta [guía de estilos](https://github.com/Laboratoria/js-style-guide/)
+Weather es una aplicacion que le permite al usuario tener informacion acerca de las predicciones del clima de acuerdo a su localizacion.
 
-¿Has visto que los sistemas operativos móviles vienen con una APP de predicción del clima? ¡Vamos a hacer la nuestra! Para ello, usaremos la API de Dark Sky y esperemos llegues a usar un API de imágenes como Flickr, Unsplash u otro. A continuación te dejamos unos slides con algunos recursos y guías del flujo de la app. Recuerda que no es necesario que sigas el diseño al pie de la letra, eres completamente libre de adaptarlo a tus gustos.
+#### TRABAJO COLABORATIVO 
+
+>Valeria valles 
+
+>Yanina Mercado 
+
+
+#### HERRAMIENTAS UTILIZADAS
+
+- HTML
+- CSS / RESPONSIVE
+- FRAMEWORK BOOTSTRAP
+- JQUERY
+- JAVASCRIP
+
+
+(https://github.com/Laboratoria/js-style-guide/)
 
